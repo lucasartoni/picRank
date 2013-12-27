@@ -1,3 +1,15 @@
 body{
-	background-color: #999;
+	background-color: #fff;
+}
+img{
+	width: 150px;
+	height: auto;
+}
+
+
+.caption {
+	color: #000;
+	float: auto;
+	display: block;
+	width: 200px;
 }
