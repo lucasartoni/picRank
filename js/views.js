@@ -18,7 +18,7 @@ var PictureView = Backbone.View.extend({
 
 var SmallPictureView = Backbone.View.extend({
 	className: 'smallThumb',
-	template: _.template('<img src="<%= picURL %>_s.jpg" title="<%= clicks %>">'),
+	template: _.template('<a href="<%= pageURL %>" target="_blank"><img src="<%= picURL %>_s.jpg" title="<%= clicks %> clicks"></a>'),
 	render: function(){
 		this.$el.html(this.template(this.model.toJSON()));
 		return this;
@@ -47,7 +47,9 @@ var PicSet = Backbone.View.extend({
 	},
 	addOne: function(picture){
  		var pictureView = new SmallPictureView({model: picture});
- 	   	this.$el.append(pictureView.render().el);
+		if (picture.get('clicks')>0){
+ 	   		this.$el.append(pictureView.render().el);
+		};
 	},
 	render: function(){
 		this.$el.html('');

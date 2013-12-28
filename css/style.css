@@ -28,14 +28,15 @@ h1{
 }
 
 #allpics {
-	width: 400px;
+	width: 580px;
 	display: none;
+	padding: 20px;
 }
 #allpics .smallThumb{
 	display: inline;
 }
 #allpics .smallThumb img{
-	width: 36px;
+	width: 50px;
 	height: auto;
 
 	

@@ -12,7 +12,7 @@ console.log('### picRank loading completed ###');
 
 $(document).ready(function (){
 	$('#pick').append(selector.el);
-	$('#allpics').append(picSet.el);
+	$('#allpics').find('.panel-body').append(picSet.el);
 	
 	$('#startBtn').on('click',function(){
 		var num1 = 0;
