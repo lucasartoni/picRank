@@ -1,15 +1,58 @@
 body{
-	background-color: #fff;
+	background-color: #a5a5a5;
 }
 img{
 	width: 150px;
 	height: auto;
+	border-radius: 5%;
+	left: auto;
+	right: auto;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+	color: #aaa;
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+h1{
+	color: #222222;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -25px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 25px;
+  color: #aaa;
+  background-color: #222222;
 }
 
 
-.caption {
-	color: #000;
-	float: auto;
-	display: block;
-	width: 200px;
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 3px 0;
+}
+
+.thumbnail{
+	background-color: #111;
 }
