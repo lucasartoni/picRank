@@ -1,5 +1,5 @@
 var PictureView = Backbone.View.extend({
-	template: _.template('<div class="col-md-4"><a href="#" class="thumbnail"><img src="<%= picURL %>"></a><div class="caption"><h3><%= title %></a><span class="badge pull-right"><%= clicks %></span></h3></div><a href="<%= pageURL %>" target="_blank"><span class="glyphicon glyphicon-camera"></span></a></div>'),
+	template: _.template('<div class="col-md-4"><a href="#" class="thumbnail"><img src="<%= picURL %>"></a><div class="caption"><h3><%= title %></a><span class="badge pull-right	"><%= clicks %></span></h3></div><a href="<%= pageURL %>" target="_blank"><span class="glyphicon glyphicon-camera"></span></a></div>'),
 	render: function(){
 		var attributes = this.model.toJSON();
 		this.$el.html(this.template(attributes));
