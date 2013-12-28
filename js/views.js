@@ -1,5 +1,6 @@
 var PictureView = Backbone.View.extend({
-	template: _.template('<div class="col-md-4"><a href="#" class="thumbnail"><img src="<%= picURL %>"></a><div class="caption"><h3><%= title %></a><span class="badge pull-right	"><%= clicks %></span></h3></div><a href="<%= pageURL %>" target="_blank"><span class="glyphicon glyphicon-camera"></span></a></div>'),
+	template: _.template('<a href="#" class="thumbnail"><img src="<%= picURL %>_q.jpg"></a><div class="caption"><h3><%= title %></a><span class="badge pull-right	"><%= clicks %></span></h3></div><a href="<%= pageURL %>" target="_blank"><span class="glyphicon glyphicon-camera"></span></a>'),
+	className: 'col-md-5',
 	render: function(){
 		this.$el.html(this.template(this.model.toJSON()));
 		return this;
@@ -16,9 +17,8 @@ var PictureView = Backbone.View.extend({
 });
 
 var SmallPictureView = Backbone.View.extend({
-	tagname: 'img',
 	className: 'smallThumb',
-	template: _.template('<img src="<%= picURL %>" title="<%= clicks %>">'),
+	template: _.template('<img src="<%= picURL %>_s.jpg" title="<%= clicks %>">'),
 	render: function(){
 		this.$el.html(this.template(this.model.toJSON()));
 		return this;

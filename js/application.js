@@ -15,21 +15,24 @@ $(document).ready(function (){
 	$('#allpics').append(picSet.el);
 	
 	$('#startBtn').on('click',function(){
-		console.log('start');	
 		var num1 = 0;
 		var num2 = 0;
 		while (num1 == num2){
 			var num1 = Math.floor((Math.random()*(pictures.length-1)));
 			var num2 = Math.floor((Math.random()*(pictures.length-1)));
 		}
-		console.log(num1+' - '+num2);
 		h2h.reset();
 		h2h.add(pictures.models[num1]);
 		h2h.add(pictures.models[num2]);	
 		selector.render();
 		pictures.sort();
 		picSet.render();
+		$(this).html('Skip <span class="glyphicon glyphicon-circle-arrow-right"></span>');
+		$('#toggleRes').show();
 		//$(this).hide();	
+	});
+	$('#toggleRes').on('click',function(){
+		$('#allpics').toggle('slow');
 	});
 	
 });

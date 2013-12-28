@@ -22,8 +22,14 @@ body{
 h1{
 	color: #222222;
 }
+
+#toggleRes {
+	display: none;
+}
+
 #allpics {
 	width: 400px;
+	display: none;
 }
 #allpics .smallThumb{
 	display: inline;
@@ -31,6 +37,8 @@ h1{
 #allpics .smallThumb img{
 	width: 36px;
 	height: auto;
+
+	
 }
 
 

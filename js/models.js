@@ -21,7 +21,7 @@ var Pictures = Backbone.Collection.extend({
 				var photo=response.photos.photo[i];
 				var pic=new Picture();
 				pic.set('title',photo.title);
-				pic.set('picURL','http://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'_q.jpg');
+				pic.set('picURL','http://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret);
 				pic.set('pageURL','http://www.flickr.com/photos/'+photo.owner+'/'+photo.id);
 				that.add(pic);
 			}
