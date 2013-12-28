@@ -26,5 +26,8 @@ var Pictures = Backbone.Collection.extend({
 				that.add(pic);
 			}
 		});
+	},
+	comparator: function(model){
+		return -model.get('clicks');
 	}
 });

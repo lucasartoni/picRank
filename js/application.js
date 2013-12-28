@@ -6,11 +6,14 @@ pictures.fetchPics();
 var h2h = new Pictures(); // the two pics head 2 head
 var selector = new Selector({collection: h2h}); //the h2h view
 var picSet = new PicSet({collection: pictures}); //the picset view
-$('#pick').append(selector.el);
+
 
 console.log('### picRank loading completed ###');
 
 $(document).ready(function (){
+	$('#pick').append(selector.el);
+	$('#allpics').append(picSet.el);
+	
 	$('#startBtn').on('click',function(){
 		console.log('start');	
 		var num1 = 0;
@@ -24,6 +27,8 @@ $(document).ready(function (){
 		h2h.add(pictures.models[num1]);
 		h2h.add(pictures.models[num2]);	
 		selector.render();
+		pictures.sort();
+		picSet.render();
 		//$(this).hide();	
 	});
 	

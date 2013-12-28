@@ -1,6 +1,4 @@
-body{
-	background-color: #a5a5a5;
-}
+
 img{
 	width: 150px;
 	height: auto;
@@ -18,9 +16,23 @@ body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
 }
+body{
+	background-color: #a5a5a5;
+}
 h1{
 	color: #222222;
 }
+#allpics {
+	width: 400px;
+}
+#allpics .smallThumb{
+	display: inline;
+}
+#allpics .smallThumb img{
+	width: 36px;
+	height: auto;
+}
+
 
 /* Wrapper for page content to push down footer */
 #wrap {
