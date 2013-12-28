@@ -1,26 +1,30 @@
 console.log('### picRank started ###');
+console.log('### Fetching pics ###');
 
-var firstPicture = new Picture();
-var secondPicture = new Picture();
-var pic1 = new PictureView({model: firstPicture});
-var pic2 = new PictureView({model: secondPicture});
+var pictures = new Pictures(); //the whole set of pics from flickr
+pictures.fetchPics();
+var h2h = new Pictures(); // the two pics head 2 head
+var selector = new Selector({collection: h2h}); //the h2h view
+var picSet = new PicSet({collection: pictures}); //the picset view
+$('#pick').append(selector.el);
 
+console.log('### picRank loading completed ###');
 
-
-
-
-
-pic1.model.set('title','first pic');
-pic1.model.set('picURL', 'http://farm3.staticflickr.com/2879/11400105483_ea3297c590_q.jpg');
-pic1.model.set('pageURL','http://www.flickr.com/photos/lucasartoni/11400105483/');
-pic1.model.fetchFirstPic();	
-
-pic2.model.set('title','second pic');
-pic2.model.set('picURL', 'http://farm4.staticflickr.com/3684/11399661703_597c750814_q.jpg');
-pic2.model.set('pageURL','http://www.flickr.com/photos/lucasartoni/11399661703/');
-
-
-$('#pick').append(pic1.el);
-$('#pick').append(pic2.el);
-
-console.log('### picRank completed ###');
+$(document).ready(function (){
+	$('#startBtn').on('click',function(){
+		console.log('start');	
+		var num1 = 0;
+		var num2 = 0;
+		while (num1 == num2){
+			var num1 = Math.floor((Math.random()*(pictures.length-1)));
+			var num2 = Math.floor((Math.random()*(pictures.length-1)));
+		}
+		console.log(num1+' - '+num2);
+		h2h.reset();
+		h2h.add(pictures.models[num1]);
+		h2h.add(pictures.models[num2]);	
+		selector.render();
+		//$(this).hide();	
+	});
+	
+});
