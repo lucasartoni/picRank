@@ -12,15 +12,15 @@ img{
 
 html,
 body {
-	color: #aaa;
+	color: #fff;
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
 }
 body{
-	background-color: #a5a5a5;
+	background-color: #2d4b90;
 }
 h1{
-	color: #222222;
+	color: #fff;
 }
 
 #toggleRes {
@@ -37,9 +37,10 @@ h1{
 }
 #allpics .smallThumb img{
 	width: 50px;
-	height: auto;
-
-	
+	height: auto;	
+}
+h3 {
+	color: #222;
 }
 
 
