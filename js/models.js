@@ -8,6 +8,7 @@ var Picture = Backbone.Model.extend({
 	addClick: function(){
 		var clicks = this.get('clicks');
 		this.set('clicks',++clicks);
+		_gaq.push(['_trackEvent', 'Picture', 'Click', this.get('picURL')]); 
 	}
 });
 

@@ -15,6 +15,7 @@ $(document).ready(function (){
 	$('#allpics').find('.panel-body').append(picSet.el);
 	
 	$('#startBtn').on('click',function(){
+		_gaq.push(['_trackEvent', 'Button', 'Click', $(this).html().split(' ')[0]]); //traks the first word of the button label
 		var num1 = 0;
 		var num2 = 0;
 		while (num1 == num2){
