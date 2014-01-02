@@ -14,12 +14,20 @@
 		        <div class="page-header">
 		          <h1>picRank - find your best shot</h1>
 		        </div>
-				<div class="panel">
+				<div id="tips" class="alert alert-info alert-dismissable">
+				  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				  <strong>Pick one!</strong> Which one do you like the most?
+				</div>
+				<div class="panel" id="pick-panel">
 					<div id="pick" class="panel-body">
 						
 					</div>
-					<button id="startBtn" class="btn btn-primary">Start</button>
-					<button id="toggleRes" class="btn btn-primary">Show Results</button>
+				</div>
+				<div class="panel" id="actions">
+					<div class="panel-body">
+						<button id="startBtn" class="btn btn-primary">Start</button>
+						<button id="toggleRes" class="btn btn-primary">Show Results</button>
+					</div>
 				</div>
 				<div class="panel" id="allpics">
 					<div class="panel-body">
@@ -44,5 +52,18 @@
 <script src="js/models.js"></script>
 <script src="js/views.js"></script>
 <script src="js/application.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2026295-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>

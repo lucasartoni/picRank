@@ -23,12 +23,19 @@ h1{
 	color: #fff;
 }
 
+#pick-panel{
+	display: none;
+}
+
+#tips{
+	display: none;
+}
+
 #toggleRes {
 	display: none;
 }
 
 #allpics {
-	width: 580px;
 	display: none;
 	padding: 20px;
 }

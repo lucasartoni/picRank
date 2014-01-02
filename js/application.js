@@ -28,11 +28,21 @@ $(document).ready(function (){
 		pictures.sort();
 		picSet.render();
 		$(this).html('Skip <span class="glyphicon glyphicon-circle-arrow-right"></span>');
-		$('#toggleRes').show();
-		//$(this).hide();	
+		$('#toggleRes').fadeIn('slow');
+		$('#pick-panel').slideDown('slow');
+		$('#tips').slideDown('slow');
+		$('#tips').on('click',function(){
+			$(this).slideUp('slow');
+			$(this).detach();
+		})
 	});
 	$('#toggleRes').on('click',function(){
-		$('#allpics').toggle('slow');
+		$('#allpics').slideToggle('slow');
+		if ($('#toggleRes').html() == 'Show Results'){
+			$('#toggleRes').html('Hide Results');
+		}else{
+			$('#toggleRes').html('Show Results');
+		}
 	});
 	
 });
